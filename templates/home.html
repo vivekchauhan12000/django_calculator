@@ -1,11 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>hello there</h1>
+<i class="fa fa-cloud" style="font-size:60px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+<h1 style="color: floralwhite;font-family:verdana;">ContentSum</h1>
+<h3 style="color: floralwhite;">Convert complex big line of information into your understanding manner using machine learning</h3>
 
 <form action="add">
-  Enter number 1st <input type="text" name="num1"><br>
-  Enter number 2nd <input type="text" name="num2"><br>
+  <div class="form-group">
+    
+    <label for="text" style="color: floralwhite;">Text to be be summaried</label>
+   <textarea class="form-control" id="text" type="text" name="num1" rows="19"></textarea>
+   
+ 
+ 
+  </div>
+  <input type="submit" class="btn btn-primary" >
 
-  <input type="submit">
 </form>
 {% endblock %}

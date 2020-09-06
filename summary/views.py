@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from gensim.summarization import summarize
+
 
 # Create your views here.
 
@@ -8,8 +10,8 @@ def home(request):
 
 def add(request):
 
-    val1=int(request.GET["num1"])
-    val2=int(request.GET["num2"])    
-    res =val1+val2
+    val1=str(request.GET["num1"])
+     
+    res =summarize(val1)
 
     return render(request,"result.html",{"result": res})
